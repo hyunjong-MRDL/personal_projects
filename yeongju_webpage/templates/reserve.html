@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}예약하기{% endblock %}
+{% block content %}
+<h1>예약하기</h1>
+<form method="post" class="form">
+  <label>이름
+    <input name="name" required value="{{ form.name or '' }}" />
+  </label>
+  <label>전화번호
+    <input name="phone" required placeholder="010-1234-5678"
+           pattern="0\d{1,2}-?\d{3,4}-?\d{4}" value="{{ form.phone or '' }}"/>
+  </label>
+  <div class="row">
+    <label>체크인
+      <input type="date" name="checkin" required value="{{ form.checkin or '' }}"/>
+    </label>
+    <label>체크아웃
+      <input type="date" name="checkout" required value="{{ form.checkout or '' }}"/>
+    </label>
+  </div>
+  <label>투숙 인원
+    <input type="number" name="guests" min="1" max="10" value="{{ form.guests or 1 }}"/>
+  </label>
+  <label>요청사항(선택)
+    <textarea name="note" rows="3">{{ form.note or '' }}</textarea>
+  </label>
+  <button class="btn" type="submit">예약 제출</button>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}예약 완료{% endblock %}
+{% block content %}
+<section class="success">
+  <h1>예약이 접수되었습니다 🎉</h1>
+  <p>예약 번호: <strong>#{{ r.id }}</strong></p>
+  <ul>
+    <li>이름: {{ r.name }}</li>
+    <li>전화: {{ r.phone }}</li>
+    <li>체크인: {{ r.checkin }} / 체크아웃: {{ r.checkout }}</li>
+    <li>인원: {{ r.guests }}명</li>
+  </ul>
+  <a class="btn" href="/">홈으로</a>
+</section>
+{% endblock %}

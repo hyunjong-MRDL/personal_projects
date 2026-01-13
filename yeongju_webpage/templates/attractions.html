@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}주변 관광지{% endblock %}
+{% block content %}
+<h1>주변 관광지 추천</h1>
+<div class="cards">
+  {% for p in places %}
+  <div class="card">
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.desc }}</p>
+    <span class="tag">#{{ p.tag }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
