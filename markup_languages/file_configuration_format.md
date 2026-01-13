@@ -1,0 +1,6 @@
+# FILE CONFIGURATION & DATA EXCHANGE
+
+### 1. INI
+### 2. AJAX
+### 3. YAML
+### 4. TOML
