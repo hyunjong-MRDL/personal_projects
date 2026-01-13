@@ -1,1 +1,8 @@
+# Large files
 data/
+
+# Python build files
+__pycache__/
+
+# Sensitive Information
+.env
