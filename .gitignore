@@ -1,5 +1,6 @@
 # Large files
 data/
+model_params/
 
 # Python build files
 __pycache__/
